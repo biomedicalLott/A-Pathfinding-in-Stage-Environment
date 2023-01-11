@@ -1,0 +1,9 @@
+<launch>
+<node name="stage" pkg="stage_ros" type="stageros"
+      args="$(find lab4)/world/playground.world" />
+  <!-- Launch the Test Node -->
+  <node pkg="lab4" name="astar" type="astar" output="screen">
+    <rosparam command="load" file="$(find lab4)/params.yaml"/>
+  </node>
+
+</launch>

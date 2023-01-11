@@ -1,0 +1,31 @@
+# The rate at which the pose and the lidar publish
+update_pose_rate: 0.001
+
+# Lidar values 
+angle_min: -1.57079637051
+angle_max: 1.57079637051
+angle_increment: 0.0174532924
+#0.00872664619237
+time_increment: 0.0
+scan_time: 0.0
+range_min: 0.0
+range_max: 3.0
+scan_beams: 361
+#also has arr for Ranges and Intensities.
+
+# The names of topics to listen and publish to
+pose_topic: "/base_pose_ground_truth"
+scan_topic: "/base_scan"
+clock_topic: "/clock"
+odom_topic: "/odom"
+log_topic: "/rosout"
+tf_topic: "/tf"
+# Topic names of various drive channels
+move_topic: "/cmd_vel"
+test_drive_topic: "/tester"
+
+# Broadcaster for Ransac
+ransac_topic: "/ransac"
+
+broadcast_transform: true
+publish_ground_truth_pose: true
